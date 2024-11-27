@@ -1,0 +1,27 @@
+# permissions for end users to edit kubesans.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: ksan-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: kubesan-editor-role
+rules:
+- apiGroups:
+  - ksan-operator.storage.openshift.io.ksan-operator.storage.openshift.io
+  resources:
+  - kubesans
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ksan-operator.storage.openshift.io.ksan-operator.storage.openshift.io
+  resources:
+  - kubesans/status
+  verbs:
+  - get

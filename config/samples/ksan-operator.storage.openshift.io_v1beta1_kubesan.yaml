@@ -1,0 +1,9 @@
+apiVersion: ksan-operator.storage.openshift.io.ksan-operator.storage.openshift.io/v1beta1
+kind: Kubesan
+metadata:
+  labels:
+    app.kubernetes.io/name: ksan-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: kubesan-sample
+spec:
+  # TODO(user): Add fields here
